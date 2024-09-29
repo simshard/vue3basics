@@ -21,3 +21,20 @@
         data() {
             return {
                 greeting: 'Nodey Hello There'
+ <script>
+    Vue.createApp({
+        data() {
+            return {
+                greeting: 'Nodey Hello There'
+            };
+        },
+            mounted() {
+                setTimeout(() => {
+                    this.greeting = 'Changed';
+                }, 3000)
+            }
+        }).mount('#app');
+
+    </script>
+</body>
+</html> 
