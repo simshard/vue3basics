@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,3 +21,15 @@
         data() {
             return {
                 greeting: 'Nodey Hello There'
+            };
+        },
+            mounted() {
+                setTimeout(() => {
+                    this.greeting = 'Changed';
+                }, 3000)
+            }
+        }).mount('#app');
+
+    </script>
+</body>
+</html> 
