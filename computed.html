@@ -9,9 +9,14 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-full grid place-items-center"> 
-     <div id="app">
-       <section v-show ="inProgressTasks.length">
+<body class="h-full grid place-items-center bg-slate-500"> 
+    
+    
+    <div id="app">
+        <h1 class="text-4xl font-bold mb-6">To Do List</h1>
+    
+    
+        <section v-show ="inProgressTasks.length">
         <h2 class="text-2xl font-black mb-2">In Progress</h2>
         <ul>
             <li v-for="task in inProgressTasks"
@@ -22,6 +27,8 @@
             </li>
         </ul>             
        </section>
+      
+      
        <section class="mt-6" v-show ="completedTasks.length">
         <h2 class="text-2xl font-black mb-2">Completed</h2>
         <ul>
@@ -34,17 +41,24 @@
             </li>
         </ul>             
        </section>
-        
+
+       <div class="mt-8 text-white">
+       <p><a href="componentry.html">Components</a></p>
+        </div>
      </div>
+
+
+
 
 <script>
     let app = {
         data(){
             return{
                 tasks: [
-                    {name:'Thing 1',complete:false,id:1}, 
-                    {name:'Thing 2',complete:false, id:2},
-                    {name:'Thing 3',complete:false, id:3}]
+                    {name:'Do a Thing 1',complete:false, id:1}, 
+                    {name:'Do a Thing 2',complete:false, id:2},
+                    {name:'Do a Thing 3',complete:false, id:3}
+                ]
             }
         },
 
