@@ -3,9 +3,10 @@ export default {
         <button 
         :class="{
                 'border rounded px-5 py-2 disabled:cursor-not-allowed': true,
-                'bg-blue-600 hover:bg-blue-700': type === 'primary',
-                'bg-purple-200 hover:bg-purple-400': type === 'secondary',
-                'bg-gray-200 hover:bg-gray-400': type === 'muted',
+                'text-white': true,
+                'bg-blue-500 hover:bg-blue-700': type === 'primary',
+                'bg-indigo-400 hover:bg-indigo-600': type === 'secondary',
+                'bg-gray-300/10 hover:bg-gray-400': type === 'muted',
                 'is-loading': processing
             }" 
         :disabled="processing">
@@ -15,7 +16,7 @@ export default {
     props: {
         type: {
             type: String,
-            default: 'primary'
+            default: 'secondary'
         },
 
         processing: {
