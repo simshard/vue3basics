@@ -1,24 +1,27 @@
 import AssignmentList from "./AssignmentList.js";
+import AssignmentCreate from "./AssignmentCreate.js";
 
 export default {
-    components: { AssignmentList },
+    components: { AssignmentList, AssignmentCreate },
 
-    template: `
-        <section class="space-y-6">
+    template:/*html*/ `
+        <section>
             <assignment-list :assignments="filters.inProgress" title="In Progress"></assignment-list>
             <assignment-list :assignments="filters.completed" title="Completed"></assignment-list>
+            
+            <assignment-create @add="add"></assignment-create>
         </section>
     `,
 
     data() {
         return {
             assignments: [
-                { name: 'Finish project', complete: false, id: 1 },
-                { name: 'Read Chapter 4', complete: false, id: 2 },
-                { name: 'Turn in Homework', complete: false, id: 3 },
-                { name: 'Clean the kitchen', complete: false, id: 4 },
-                { name: 'Make Cheese Scones', complete: false, id: 5 },
-            ]
+                { name: 'Finish squid training', complete: false, id: 1 },
+                { name: 'Read Chapter 234', complete: false, id: 2 },
+                { name: 'work with assiduity and do not relent', complete: false, id: 3 },
+                { name: 'Cleanse yer kitchen', complete: false, id: 4 },
+                { name: 'do not despise the snake for having no horns', complete: false, id: 5 },
+            ],
         }
     },
 
@@ -28,6 +31,15 @@ export default {
                 inProgress: this.assignments.filter(assignment => ! assignment.complete),
                 completed: this.assignments.filter(assignment => assignment.complete)
             };
+        }
+    },
+    methods:{
+        add(name){ 
+            this.assignments.push({
+                name: name,
+                complete: false,
+                id: this.assignments.length + 1
+            });
         }
     }
 }
