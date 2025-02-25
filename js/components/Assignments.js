@@ -16,6 +16,8 @@ export default {
                 { name: 'Finish project', complete: false, id: 1 },
                 { name: 'Read Chapter 4', complete: false, id: 2 },
                 { name: 'Turn in Homework', complete: false, id: 3 },
+                { name: 'Clean the kitchen', complete: false, id: 4 },
+                { name: 'MAGA', complete: false, id: 5 },
             ]
         }
     },
