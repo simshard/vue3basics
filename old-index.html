@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta X-Content-Type-Options= "nosniff" >
+    <title> Vue 3 Basics </title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body class="h-full grid place-items-center bg-gray-800 text-white">
+   
+    <div id="app">
+        {{greeting}}
+    </div>
+
+    <p><a href="events_attributes.html">attribute binding and event handling</a></p>
+
+    <script >
+        Vue.createApp({
+            data() {
+                return {
+                    greeting: 'Hello World',
+                    active: false
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
