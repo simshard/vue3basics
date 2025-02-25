@@ -13,10 +13,12 @@ export default {
             <slot />
         </button>
     `,
+
+
     props: {
         type: {
             type: String,
-            default: 'secondary'
+            default: 'primary'
         },
 
         processing: {
