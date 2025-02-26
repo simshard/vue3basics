@@ -16,11 +16,10 @@ export default {
     data() {
         return {
             assignments: [
-                { name: 'Finish squid training', complete: false, id: 1 },
-                { name: 'Read Chapter 234', complete: false, id: 2 },
-                { name: 'work with assiduity and do not relent', complete: false, id: 3 },
-                { name: 'Cleanse yer kitchen', complete: false, id: 4 },
-                { name: 'do not despise the snake for having no horns', complete: false, id: 5 },
+                { name: 'Finish squid eye training', complete: false, id: 1 , tag: 'alpha'},
+                { name: 'work with assiduity and do not relent', complete: false, id: 3  , tag: 'alpha' },
+                { name: 'Empty the stinky bin', complete: false, id: 4 , tag: 'beta'  },
+                { name: 'do not despise the snake for having no horns', complete: false, id: 5  , tag: 'gamma' },
             ],
         }
     },
